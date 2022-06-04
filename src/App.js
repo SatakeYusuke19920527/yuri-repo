@@ -3,17 +3,29 @@ import React, { useState } from 'react';
 import './App.css';
 
 export default function App() {
-   const [count, setCount ] = useState(0);
-
+  const [count, setCount] = useState(0);
+  let box = []
   const increment = () => {
-                setCount(count + 1);
-                console.log(count);
-              };
+     setCount(count + 1);  
+     console.log(count);
+  };
+  const increment2 = () => {
+    setCount(count - 1);
+  };
+  const increment3 = () => {
+    setCount(count * 0);
+  };
+  const add = () => {
+    
+    box.push('yuri')
+    console.log('add にきてるよ', box)
+  }
 const buttonalert = () => {
               alert('Clickked!');
              
-          }
-            const name = '0'
+}
+  const name = '0'
+  console.log(box, 'boxの中身')
   return (
     <div className="App">
       <header className="App-header">
@@ -24,24 +36,21 @@ const buttonalert = () => {
         <button
           onClick={() => window.alert("Hello World")}
 >button</button>
-        <butonn>butonn</butonn>
+        <button>butonn</button>
         <input type="text" />
         <a href="#">a タグ </a>
-        
-        <button onClick={increment}>いいね！</button>{name}
-        
-        <p>
-
+        <button onClick={increment}>いいね！</button><button onClick={increment2}>よくないね！</button><button onClick={increment3}>リセット</button>{count}
+        <button onClick={add}>add</button>
           
           <code className="aiueo">
             
             <h1>Hello world </h1></code>
            
-        </p>
+        
        
           <button onClick={buttonalert}>Click me</button>
          
-        <a href="#" onclick="window.alert(”localhost: 3000”)"></a>
+        {/* <a href="#" onClick="window.alert(”localhost: 3000”)"></a> */}
     
         <a
           className="App-link"
