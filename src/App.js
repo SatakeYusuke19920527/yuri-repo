@@ -1,10 +1,10 @@
 import logo from './logo.svg';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './App.css';
 
 export default function App() {
   const [count, setCount] = useState(0);
-  let box = []
+  let tempBox = []
   const increment = () => {
      setCount(count + 1);  
      console.log(count);
@@ -16,16 +16,15 @@ export default function App() {
     setCount(count * 0);
   };
   const add = () => {
-    
-    box.push('yuri')
-    console.log('add にきてるよ', box)
+    tempBox.push('yuri')
+    console.log(tempBox, 'atemp box check')
   }
 const buttonalert = () => {
               alert('Clickked!');
              
 }
   const name = '0'
-  console.log(box, 'boxの中身')
+  console.log(tempBox, 'boxの中身')
   return (
     <div className="App">
       <header className="App-header">
@@ -46,7 +45,9 @@ const buttonalert = () => {
             
             <h1>Hello world </h1></code>
            
-        
+        {
+          tempBox.map()
+        }
        
           <button onClick={buttonalert}>Click me</button>
          
