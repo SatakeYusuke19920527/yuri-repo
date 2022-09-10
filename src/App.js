@@ -8,13 +8,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<ComponentA />} />
         <Route path="/componentb" element={<ComponentB />} />
-        <Route path="/componentc" element={<ComponentC />} />
-        <Route path="/" element={<ComponentC />} />
-        <Route path="/componenta" element={<ComponentA />} />
-        <Route path="/componentb" element={<ComponentB />} />
-        <Route path="/" element={<ComponentA />} />
-        <Route path="/componentb" element={<ComponentB />} />
-        <Route path="/componentc" element={<ComponentC />} />
+        <Route path="/componentc" element={<ComponentC />} />        
       </Routes>
     </Router>
   );
